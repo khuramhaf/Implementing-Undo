@@ -105,6 +105,10 @@ function cut(){
             var array1;
     
             if (end*source.buffer.sampleRate >= 1){
+
+                var array3 = [...array];
+    
+    undo.push(array3);
             
             array1 = array.slice(parseInt(start*audiocontext.sampleRate), parseInt(end*audiocontext.sampleRate));
     

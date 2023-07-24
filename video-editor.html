@@ -14,6 +14,7 @@
     <script src="vexport.js"></script>
     <script src="wugeneratewave.js"></script>
     <script src = "mp4box.js"></script>
+    <script src = "undo.js"></script>
     
     <link rel="stylesheet" type="text/css" href="vstyle.css">
     <title>Free Online MP4 Video Editor</title>
@@ -84,6 +85,7 @@
 <button class="button" id ="stop" onclick="stop()">Stop</button>
 <button class="button" id ="trim1" onclick="trim()">Trim</button>
 <button class="button" id="cut1" onclick="cut()">Cut</button>
+<button class="button" id="undo" onclick="undodata()">Undo</button>
 <button class="button" id="generatewave" onclick="generatewave()">Generate Waveform</button>
 </div>
 
@@ -125,6 +127,7 @@ After providing the starting and ending points, you have two options: trim or cu
         var check = null;
         var sourcecheck = null;
         var sourceduration = 0;
+        var undo=[];
 
         var videodata = []; //this is main video array
         var codecinfo;

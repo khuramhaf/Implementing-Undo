@@ -38,6 +38,9 @@ function myFunction() {
             }
             else{
     
+                if(array.length>0){
+                    undo.push([...array])
+                }
     
                 array = array.concat(y);
             }

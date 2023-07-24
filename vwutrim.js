@@ -103,7 +103,8 @@ document.getElementById("error").innerHTML = "Ending Point is greater than equal
         
 
         document.getElementById("timer").innerHTML = time;
-       
+        var array4 = [...array];
+        undo.push(array4);
         array.splice(parseInt(start*audiocontext.sampleRate), parseInt(final*audiocontext.sampleRate));
         videodata.splice(parseInt(start*videoinfo.samplerate), parseInt(final*videoinfo.samplerate))
         document.getElementById("start").value="";
